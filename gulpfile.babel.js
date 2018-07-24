@@ -14,6 +14,8 @@ import autoprefixer from "gulp-autoprefixer";
 import sourcemaps from "gulp-sourcemaps";
 const browserSync = BrowserSync.create();
 import runSequence from "run-sequence";
+import imagemin from "gulp-imagemin";
+import cache from "gulp-cache";
 
 // Hugo arguments
 const hugoArgsDefault = ["-d", "../dist", "-s", "site", "-v"];
@@ -37,6 +39,7 @@ gulp.task("build-css", function(callback) {
     "css",
     callback);
 });
+
 
 // Compile CSS with PostCSS
 gulp.task("css", () => (
@@ -73,6 +76,29 @@ gulp.task("js", (cb) => {
   });
 });
 
+gulp.task("cache:clear", function(callback) {
+  return cache.clearAll(callback);
+});
+
+gulp.task("images", function() {
+  return gulp.src("./src/img/**/*.+(png|jpg|jpeg|gif|svg)")
+    // Caching images that ran through imagemin
+    .pipe(cache(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.svgo({plugins: [{removeViewBox: true}]})
+    ], {
+      verbose: true
+    })))
+    .pipe(gulp.dest("./site/static/img/"));
+});
+
+gulp.task("build-images", function(callback) {
+  runSequence("cache:clear",
+    "images",
+    callback);
+});
 // Move all fonts in a flattened directory
 gulp.task("fonts", () => (
   gulp.src("./src/fonts/**/*")
