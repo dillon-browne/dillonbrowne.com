@@ -24,32 +24,19 @@ gulp.task("hugo", (cb) => buildSite(cb));
 gulp.task("hugo-preview", (cb) => buildSite(cb, hugoArgsPreview));
 
 // Run server tasks
-
-gulp.task("server",  function(callback) {
-  runSequence("compile-scss",
-    ["hugo", "css", "js", "fonts"],
-    callback);
-}, (cb) => runServer(cb));
-gulp.task("server-preview", function(callback) {
-  runSequence("compile-scss",
-    ["hugo-preview", "css", "js", "fonts"],
-    callback);
-}, (cb) => runServer(cb)
-
-
-);
+gulp.task("server", ["hugo", "build-css", "js", "fonts"], (cb) => runServer(cb));
+gulp.task("server-preview", ["hugo-preview", "build-css", "js", "fonts"], (cb) => runServer(cb));
 
 // Build/production tasks
-gulp.task("build", function(callback) {
+gulp.task("build", ["build-css", "js", "fonts"], (cb) => buildSite(cb, [], "production"));
+gulp.task("build-preview", ["build-css", "js", "fonts"], (cb) => buildSite(cb, hugoArgsPreview, "production"));
+
+/// build SCSS to CSS
+gulp.task("build-css", function(callback) {
   runSequence("compile-scss",
-    ["css", "js", "fonts"],
+    "css",
     callback);
-}, (cb) => buildSite(cb, [], "production"));
-gulp.task("build-preview", function(callback) {
-  runSequence("compile-scss",
-    ["css", "js", "fonts"],
-    callback);
-}, (cb) => buildSite(cb, hugoArgsPreview, "production"));
+});
 
 // Compile CSS with PostCSS
 gulp.task("css", () => (

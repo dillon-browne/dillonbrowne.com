@@ -1,21 +1,368 @@
 <!doctype html>
 <html lang="{{ $.Site.Language.Lang }}">
   <head>
+    <link rel="icon" type="image/png" href="img/icons/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="img/icons/favicon-16x16.png" sizes="16x16"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
-    <title>{{ $.Site.Title }}</title>
+    <title>
+      Dillon Browne - Freelance Web Developer residing in Colorado Springs
+    </title>
     <link rel="stylesheet" href="css/main.css"/>
   </head>
-  <body>
+  <body class="home blog index-page sidebar-collapse app-data index-data home-data front-page-data">
+  <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg bg-primary"
+       color-on-scroll="200">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="" href="#">
+          <img class="nav-logo"
+               src="img/db.png" alt="DB">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="#about-me" class="nav-link">
+              <i class="material-icons">person</i> About me
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tech">
+              <i class="material-icons">linear_scale</i> Technologies
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">
+              <i class="material-icons">apps</i> Services
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
+               href="https://www.linkedin.com/in/dillonbrowne/" target="_blank"
+               data-original-title="Follow me on LinkedIn">
+              <i class="nav-social-icon fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
+               href="https://www.facebook.com/dillon.browne" target="_blank"
+               data-original-title="Like me on Facebook">
+              <i class="nav-social-icon fab fa-facebook-square"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
+               href="https://www.instagram.com/dillonbrownel" target="_blank"
+               data-original-title="Follow me on Instagram">
+              <i class="nav-social-icon fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="nav-item text-center">
+            <a href="mailto:inquire@dillonbrowne.com" rel="tooltip"
+               title="" data-placement="bottom" data-original-title="Email me at inquire@dillonbrowne.com">
+              <button class="btn btn-primary">
+                <i class="material-icons">send</i> Email Me!
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="wrapper">
+    <div class="page-header header-filter" data-parallax="false"
+         style="background-image: url('img/banner-river.jpg')">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img class="page-header-logo animated fadeIn"
+                 src="img/dillon-browne-dark.png"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main main-raised">
+      <div id="about-me" class="section text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+              <h2 class="title animated zoomIn">About me</h2>
+              <h5 class="description"> A little bit about me. I currently live in Colorado Springs, Colorado.
+                I enjoy hiking, exercising, and relaxing with friends. I have been a freelance full stack
+                developer for over 8 years.
+                You will not find anyone who works as hard as myself. I hope I get the honor and priviledge
+                to meet you.</h5>
+            </div>
+          </div>
+          <div class="features">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="info">
+                  <div class="icon icon-info">
+                    <i class="material-icons">place</i>
+                  </div>
+                  <h4 class="info-title animated zoomIn">Colorado Springs, CO</h4>
+                  <p>I am full stack developer residing in Colorado Springs, Colorado.
+                    I work remotely for a variety of different clients and companies.
+                    I coordinate and collaborate on projects with personel from 5 different
+                    timezones.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="info">
+                  <div class="icon icon-success">
+                    <i class="material-icons">done</i>
+                  </div>
+                  <h4 class="info-title animated swing">My Promise</h4>
+                  <p>I promise to provide a outstanding end-term product for all of my clients while
+                    ensuring a system of constant communication with myself to meet all requested goals
+                    and requirements. </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="info">
+                  <div class="icon icon-danger">
+                    <i class="material-icons">fingerprint</i>
+                  </div>
+                  <h4 class="info-title animated fadeInLeftBig">Identified & Trusted</h4>
+                  <p>You only work with me directly as your freelancer. I have major commerical clients
+                    residing all over the nation! Locally, I work with corporations in the Denever, CO,
+                    collaborating on many different projects.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tech" class="section text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+              <h2 class="title">Technologies I Use</h2>
+            </div>
+          </div>
+          <div class="row pb-3">
+            <div class="col-md-12 text-center">
+              <div class="icon icon-info icon-section-header">
+                <i class="fa fa-flask"></i>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 col-sm-6 text-left">
+              <h4 class="prim">Languages</h4>
+              <ul class="fa-ul">
+                <li><i class="fa-li fab fa-html5"></i>HTML</li>
+                <li><i class="fa-li fab fa-sass"></i>SASS</li>
+                <li><i class="fa-li fab fa-php"></i>PHP</li>
+                <li><i class="fa-li fab fa-python"></i>Python</li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 text-left">
+              <h4>Frameworks</h4>
+              <ul class="fa-ul">
+                <li><i class="fa-li fab fa-angular"></i>AngularJS</li>
+                <li><i class="fa-li fab fa-laravel"></i>Laravel</li>
+                <li><i class="fa-li fa fa-code"></i>BootStrap</li>
+                <li><i class="fa-li fab fa-js"></i>jQuery</li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 text-left">
+              <h4>Software</h4>
+              <ul class="fa-ul">
+                <li><i class="fa-li fab fa-node-js"></i>Node.JS</li>
+                <li><i class="fa-li fab fa-git"></i>Git</li>
+                <li><i class="fa-li fab fa-wordpress"></i>WordPress</li>
+                <li><i class="fa-li fab fa-npm"></i>NPM</li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 text-left">
+              <h4>Services</h4>
+              <ul class="fa-ul">
+                <li><i class="fa-li fab fa-keycdn"></i>KeyCDN</li>
+                <li><i class="fa-li fab fa-aws"></i>AWS</li>
+                <li><i class="fa-li fab fa-digital-ocean"></i>DigitalOcean</li>
+                <li><i class="fa-li fa fa-cloud"></i>CloudFlare</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="services" class="section text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+              <h2 class="title">Let's Talk Product</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="img/dillon-browne-head.jpg"
+                         alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Dillon Browne
+                    <br>
+                    <small class="card-description text-muted">Full Stack Developer</small>
+                  </h4>
+                  <div class="card-body">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 text-left ml-auto mr-auto pt-2">
+              <h4 class="card-title text-muted">What I can do for you:
+              </h4>
+              <ul class="fa-ul">
+                <li><i class="fa-li fa fa-check icon icon-info"></i>Web Application Development</li>
+                <li><i class="fa-li fa fa-check icon icon-info"></i>Database Administration/Development</li>
+                <li><i class="fa-li fa fa-check icon icon-info"></i>Website speed optimization</li>
+                <li><i class="fa-li fa fa-check icon icon-info"></i>WordPress development</li>
+                <li><i class="fa-li fa fa-check icon icon-info"></i>Server Administration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cta" class="section text-center bg-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+              <h2 class="title">CTA</h2>
+            </div>
+          </div>
 
-    {{ block "header" . }}{{ partial "header" . }}{{end}}
+        </div>
+      </div>
+      <div id="portfolio" class="section text-center bg-dark text-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+              <h2 class="title">Portfolio</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="team-player">
+                <div class="card bmd-card-raised">
+                  <img src="img/clients/stronvino.jpg"
+                       alt="Thumbnail Image" class="img-fluid rounded">
 
-    {{ block "main" . }}{{end}}
+                </div>
+                <span>Supplments</span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="team-player">
+                <div class="card bmd-card-raised">
+                  <img src="img/clients/fredericksburgchiropractic.jpg"
+                       alt="Thumbnail Image" class="img-fluid rounded">
 
-    {{ block "footer" . }}{{ partial "footer" . }}{{end}}
+                </div>
+                Chriopratics
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="team-player">
+                <div class="card bmd-card-raised">
+                  <img src="img/clients/howardbeach.jpg"
+                       alt="Thumbnail Image" class="img-fluid rounded">
 
+                </div>
+                Real Estate
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="team-player">
+                <div class="card bmd-card-raised">
+                  <img src="img/clients/stronvino.jpg"
+                       alt="Thumbnail Image" class="img-fluid rounded">
+
+                </div>
+                Supplments
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="team-player">
+                <div class="card bmd-card-raised">
+                  <img src="img/clients/fredericksburgchiropractic.jpg"
+                       alt="Thumbnail Image" class="img-fluid rounded">
+
+                </div>
+                Chriopratics
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="team-player">
+                <div class="card bmd-card-raised">
+                  <img src="img/clients/howardbeach.jpg"
+                       alt="Thumbnail Image" class="img-fluid rounded">
+
+                </div>
+                Real Estate
+              </div>
+            </div>
+
+            <form name="contact" id="my-form" method="POST" netlify>
+              <p>
+                <label>Your Name: <input type="text" name="name" /></label>
+              </p>
+              <p>
+                <label>Your Email: <input type="email" name="email" /></label>
+              </p>
+              <p>
+                <label>Your Role: <select name="role[]" multiple>
+                  <option value="leader">Leader</option>
+                  <option value="follower">Follower</option>
+                </select></label>
+              </p>
+              <p>
+                <label>Message: <textarea name="message"></textarea></label>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
+              <div data-netlify-recaptcha></div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="dillon" class="footer" data-background-color="black">
+      <div class="container">
+        <div class="copyright text-center">
+          &copy;
+          <script>
+              document.write(new Date().getFullYear())
+          </script>
+          , Dillon Browne. All Rights Reserved
+        </div>
+      </div>
+    </footer>
     <script src="app.js"></script>
+    <script type="text/javascript">
+        $("#my-form").submit(function(e) {
+            e.preventDefault();
 
+            var $form = $(this);
+            $.post($form.attr("action"), $form.serialize()).then(function() {
+                alert("Thank you!");
+            });
+        });
+    </script>
+  </div>
   </body>
 </html>
