@@ -13,7 +13,7 @@
 
  */
 /*     brand Colors              */
-@import "https://use.fontawesome.com/releases/v5.1.0/css/all.css";
+@import url(../../node_modules/@fortawesome/fontawesome-free/css/all.css);
 @import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:400,700%7CMaterial+Icons";
 .carousel.carousel-full-nagivation .left {
   cursor: url("../../img/arrow-left.png"), url("../../img/arrow-left.cur"), default !important; }

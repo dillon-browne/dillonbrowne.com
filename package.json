@@ -15,6 +15,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.2.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
@@ -46,7 +47,9 @@
     "jquery": "^3.3.1",
     "material-kit": "^2.0.4",
     "popper.js": "^1.14.3",
+    "postcss-clean": "^1.1.0",
     "postcss-cssnext": "^3.1.0",
+    "postcss-discard-unused": "^4.0.0",
     "postcss-import": "^11.1.0",
     "run-sequence": "^2.2.1",
     "smoothscroll": "^0.4.0",
