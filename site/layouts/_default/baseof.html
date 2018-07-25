@@ -347,7 +347,10 @@
             </div>
             <div class="col-md-9 text-center align-middle">
               <div class="col-md-8 mr-auto ml-auto">
-                <form name="SendEmail" data-netlify="true">
+                <form name="EmailMe" netlify-honeypot="email-bot-field" data-netlify="true">
+                    <p class="d-none">
+                        <label>Don’t fill this out if you're human: <input name="email-bot-field" /></label>
+                    </p>
                   <div class="form-group bmd-form-group">
                     <div class="form-row align-items-center">
                       <div class="col-8">
@@ -357,7 +360,7 @@
                                     <i class="material-icons">email</i>
                                 </span>
                           </div>
-                          <input type="email" class="form-control" placeholder="contact@dillonbrowne.com">
+                          <input name="email" type="email" class="form-control" placeholder="contact@dillonbrowne.com">
                         </div>
                       </div>
 
@@ -388,7 +391,10 @@
             </div>
             <div class="col-md-9 text-center align-middle">
               <div class="col-md-8 mr-auto ml-auto">
-                <form name="SendEmail" data-netlify="true">
+                <form name="TextMe" netlify-honeypot="phone-bot-field" data-netlify="true">
+                    <p class="d-none">
+                        <label>Don’t fill this out if you're human: <input name="phone-bot-field" /></label>
+                    </p>
                   <div class="form-group bmd-form-group">
                     <div class="form-row align-items-center">
                       <div class="col-8">
@@ -398,7 +404,7 @@
                                     <i class="material-icons">phone</i>
                                 </span>
                           </div>
-                          <input type="text" class="form-control" placeholder="(719) 301-9225">
+                          <input name="phone_number" type="text" class="form-control" placeholder="(719) 301-9225">
                         </div>
                       </div>
 

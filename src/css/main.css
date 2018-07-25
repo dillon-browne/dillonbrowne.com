@@ -13,6 +13,7 @@
 
  */
 /*     brand Colors              */
+@import url(../../node_modules/animate.css/animate.min.css);
 .carousel.carousel-full-nagivation .left {
   cursor: url("../../img/arrow-left.png"), url("../../img/arrow-left.cur"), default !important; }
 
