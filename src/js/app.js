@@ -16,6 +16,7 @@ $("#EmailMe").submit(function(e) {
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
     msgSent();
+    $("#EmailMe").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
   });
 });
 $("#TextMe").submit(function(e) {
@@ -23,6 +24,7 @@ $("#TextMe").submit(function(e) {
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
     msgSent();
+    $("#TextMe").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
   });
 });
 
@@ -45,4 +47,5 @@ function msgSent() {
     },
   });
 }
+
 
