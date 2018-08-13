@@ -12659,7 +12659,8 @@ footer {
   height: 60px; }
 
 .page-header-logo {
-  width: 50vw; }
+  width: 50vw;
+  margin-top: 25vh; }
 
 .page-header-area {
   text-align: center; }
