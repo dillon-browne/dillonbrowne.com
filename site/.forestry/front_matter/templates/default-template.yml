@@ -6,3 +6,5 @@ fields:
 - type: text
   label: Page Title
   name: page_title
+pages:
+- site/content/denver-web-developer.html
