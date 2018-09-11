@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="{{ $.Site.Language.Lang }}">
+<head>
+    <link rel="icon" type="image/png" href="img/icons/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="img/icons/favicon-16x16.png" sizes="16x16"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Dillon Browne is a freelance web developer residing in Colorado. He specializes in website development for many different businesses.">
+    <meta name="keywords" content="Dillon Browne, Colorado, Colorado Springs, Denver">
+    <meta name="author" content="Dillon Browne">
+    <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
+    <title>
+        Dillon Browne - Freelance Web Developer residing in Colorado Springs
+    </title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+
+<body class="home blog index-page sidebar-collapse app-data index-data home-data front-page-data">
+{{ block "header" . }}{{ partial "header" . }}{{end}}
+{{ block "nav" . }}{{ partial "landing/nav" . }}{{end}}
+
+<div class="wrapper">
+    <div class="page-header header-filter" data-parallax="false"
+         style="background-image: url('img/dillon-browne-freelance-developer.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-8 offset-md-6 offset-sm-2">
+                    <div class="card hero-cta animated fadeInRightBig">
+                        <div class="card-header card-header-icon card-header-info">
+                            <h3 class="card-title text-uppercase">Get started now</h3>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">start your <span class="text-rose">free</span> website consultation today</h6>
+                            {{ block "contact-form" . }}{{ partial "landing/contact-form" . }}{{end}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main main-raised">
+        <div id="about-me" class="section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-left">
+                        <h2 class="title animated zoomIn">About Me</h2>
+                        <h5 class="description"> I am freelance web developer in Denver, Colorado. I create websites, and web applications big or small for individuals and companies.I have and have had clients in the Denver area. I am an expert Wordpress developer, php application specialist ,and a skilled database administrator.
+                        </h5>
+                        <button class="btn btn-sm btn-rose">Start a Free Consultation</button>
+
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <div class="row">
+                            <div class="col-10 offset-md-2 text-left">
+                                <h2 class="title animated zoomIn">What I Do</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10 text-left offset-md-2">
+                                <ul class="fa-ul">
+                                    <li><i class="fa-li fa fa-check icon icon-primary"></i>Website Application Development</li>
+                                    <li><i class="fa-li fa fa-check icon icon-primary"></i>Database Administration/Development</li>
+                                    <li><i class="fa-li fa fa-check icon icon-primary"></i>E-Commerce Development</li>
+                                    <li><i class="fa-li fa fa-check icon icon-primary"></i>WordPress Development</li>
+                                    <li><i class="fa-li fa fa-check icon icon-primary"></i>Server Administration</li>
+                                </ul>
+                                <button class="btn btn-sm btn-info">Get Started Now</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="portfolio" class="section text-center bg-dark text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto">
+                        <h2 class="title text-light">Portfolio <br /> <small>A Few Recent Projects</small></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="team-player">
+                            <div class="card bmd-card-raised">
+                                <a class="link" href="https://stronvivo.com/" target="_blank" ><img src="./img/clients/stronvino.jpg"
+                                                                                                    alt="Thumbnail Image" class="img-fluid rounded"></a>
+                            </div>
+                            <span>E-Commerce:</span>
+                            <span class="small">Supplements</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="team-player">
+                            <div class="card bmd-card-raised">
+                                <a class="link" href="https://fredericksburgchiropractic.com/" target="_blank" >
+                                    <img src="./img/clients/fredericksburgchiropractic.jpg"
+                                         alt="Thumbnail Image" class="img-fluid rounded">
+                                </a>
+                            </div>
+                            <span>Health:</span>
+                            <span class="small">Chiropractics</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="team-player">
+                            <div class="card bmd-card-raised">
+                                <a class="link" href="http://howardbeachfamilies.com/" target="_blank" >
+                                    <img src="./img/clients/howardbeach.jpg"
+                                         alt="Thumbnail Image" class="img-fluid rounded">
+                                </a>
+
+                            </div>
+                            <span>Blog:</span>
+                            <span class="small">Local Directory</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="team-player">
+                            <div class="card bmd-card-raised">
+                                <a class="link" href="http://onconetics.com/" target="_blank" >
+                                    <img src="./img/clients/onconetics.jpg"
+                                         alt="Thumbnail Image" class="img-fluid rounded">
+                                </a>
+
+                            </div>
+                            <span>Marketing:</span>
+                            <span class="small">Research Studies</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="team-player">
+                            <div class="card bmd-card-raised">
+                                <a class="link" href="http://zookrentals.com/" target="_blank" >
+                                    <img src="./img/clients/zook-page.jpg"
+                                         alt="Thumbnail Image" class="img-fluid rounded">
+                                </a>
+
+                            </div>
+                            <span>Real Estate:</span>
+                            <span class="small">VRBO & Airbnb</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="team-player">
+                            <div class="card bmd-card-raised">
+                                <a class="link" href="http://www.cmsmailservices.com/" target="_blank" >
+                                    <img src="./img/clients/cms.jpg"
+                                         alt="Thumbnail Image" class="img-fluid rounded">
+                                </a>
+
+                            </div>
+                            <span>Business:</span>
+                            <span class="small">Mailing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact-me" class="section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto">
+                        <h2 class="title">How To Get in Touch</h2>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 text-center align-middle">
+
+                        <h4>Send me your email</h4>
+                        <h4 class="small">I will email you back within a day</h4>
+                    </div>
+                    <div class="col-md-9 text-center align-middle">
+                        <div class="col-md-8 mr-auto ml-auto">
+                            <form id="EmailMe" name="EmailMe" netlify-honeypot="email-bot-field" data-netlify="true">
+                                <p class="d-none">
+                                    <label>Don’t fill this out if you're human: <input name="email-bot-field" /></label>
+                                </p>
+                                <div class="form-group bmd-form-group">
+                                    <div class="form-row align-items-center">
+                                        <div class="col-8">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="material-icons">email</i>
+                                </span>
+                                                </div>
+                                                <input name="email" type="email" class="form-control" placeholder="contact@dillonbrowne.com" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-auto">
+                                            <button type="submit" class="btn btn-rose btn-sm">Email Me</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="mr-auto ml-auto">
+                            <h2>OR</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 text-center align-middle">
+
+                        <h4>Send me your number</h4>
+                        <h4 class="small">I will send you a text within a day</h4>
+                    </div>
+                    <div class="col-md-9 text-center align-middle">
+                        <div class="col-md-8 mr-auto ml-auto">
+                            <form id="TextMe" name="TextMe" netlify-honeypot="phone-bot-field" data-netlify="true">
+                                <p class="d-none">
+                                    <label>Don’t fill this out if you're human: <input name="phone-bot-field" /></label>
+                                </p>
+                                <div class="form-group bmd-form-group">
+                                    <div class="form-row align-items-center">
+                                        <div class="col-8">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="material-icons">phone</i>
+                                </span>
+                                                </div>
+                                                <input name="phone_number" type="text" class="form-control" placeholder="(719) 301-9225" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-auto">
+                                            <button type="submit" class="btn btn-rose btn-sm">Text Me</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {{ block "footer" . }}{{ partial "footer" . }}{{end}}
+</div>
+</body>
+</html>

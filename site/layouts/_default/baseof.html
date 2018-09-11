@@ -1,92 +1,26 @@
 <!doctype html>
 <html lang="{{ $.Site.Language.Lang }}">
-  <head>
-    <link rel="icon" type="image/png" href="img/icons/favicon-32x32.png" sizes="32x32"/>
-    <link rel="icon" type="image/png" href="img/icons/favicon-16x16.png" sizes="16x16"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-      <meta name="description" content="Dillon Browne is a freelance web developer residing in Colorado. He specializes in website development for many different businesses.">
-      <meta name="keywords" content="Dillon Browne, Colorado, Colorado Springs, Denver">
-      <meta name="author" content="Dillon Browne">
-    <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
-    <title>
-      Dillon Browne - Freelance Web Developer residing in Colorado Springs
-    </title>
-      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
-    <link rel="stylesheet" href="css/main.css"/>
-  </head>
+<head>
+  <link rel="icon" type="image/png" href="img/icons/favicon-32x32.png" sizes="32x32"/>
+  <link rel="icon" type="image/png" href="img/icons/favicon-16x16.png" sizes="16x16"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Dillon Browne is a freelance web developer residing in Colorado. He specializes in website development for many different businesses.">
+  <meta name="keywords" content="Dillon Browne, Colorado, Colorado Springs, Denver">
+  <meta name="author" content="Dillon Browne">
+  <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
+  <title>
+    Dillon Browne - Freelance Web Developer residing in Colorado Springs
+  </title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+
   <body class="home blog index-page sidebar-collapse app-data index-data home-data front-page-data">
-  <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg bg-primary"
-       color-on-scroll="200">
-    <div class="container">
-      <div class="navbar-translate">
-        <a class="" href="#">
-          <img class="nav-logo"
-               src="img/db.png" alt="DB">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
-                aria-label="Toggle navigation">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="#about-me" class="nav-link">
-              <i class="material-icons">person</i> About me
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#tech">
-              <i class="material-icons">linear_scale</i> Technologies
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">
-              <i class="material-icons">apps</i> What I do
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio">
-              <i class="material-icons">view_carousel</i> Portfolio
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
-               href="https://www.linkedin.com/in/dillonbrowne/" target="_blank"
-               data-original-title="Follow me on LinkedIn">
-              <i class="nav-social-icon fab fa-linkedin"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
-               href="https://www.facebook.com/dillon.browne" target="_blank"
-               data-original-title="Like me on Facebook">
-              <i class="nav-social-icon fab fa-facebook-square"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
-               href="https://github.com/dillonbrowne" target="_blank"
-               data-original-title="Check out my code">
-              <i class="nav-social-icon fab fa-github"></i>
-            </a>
-          </li>
-          <li class="nav-item text-center">
-            <a href="#contact-me">
-              <button class="btn btn-info">
-                 Contact Me!
-              </button>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  {{ block "header" . }}{{ partial "header" . }}{{end}}
+  {{ block "nav" . }}{{ partial "nav" . }}{{end}}
+
   <div class="wrapper">
     <div class="page-header header-filter" data-parallax="false"
          style="background-image: url('img/banner-river.jpg')">
@@ -434,18 +368,7 @@
       </div>
 
     </div>
-    <footer id="dillon" class="footer" data-background-color="black">
-      <div class="container">
-        <div class="copyright text-center">
-          &copy;
-          <script>
-              document.write(new Date().getFullYear())
-          </script>
-          , Dillon Browne. All Rights Reserved
-        </div>
-      </div>
-    </footer>
-    <script src="app.js"></script>
+    {{ block "footer" . }}{{ partial "footer" . }}{{end}}
   </div>
   </body>
 </html>
