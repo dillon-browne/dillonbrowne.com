@@ -1,7 +1,7 @@
-baseurl = "https://dillonbrowne.com"
+baseurl = "https://dillonbrowne.com/"
 languageCode = "en-us"
 languageLang = "en"
-title = "My new Victor-Hugo site"
+title = "Dillon Browne"
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details:
