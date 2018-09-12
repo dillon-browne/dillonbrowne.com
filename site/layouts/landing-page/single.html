@@ -51,57 +51,90 @@
 <div class="wrapper">
     <div class="">
         <div class="row">
-            <div class="page-header col-8" data-parallax="true"
+            <div class="page-header col-lg-8 col-md-6 col-sm-12" data-parallax="false"
                  style="background-image: url('img/dillon-browne-freelance-developer-highlight.jpg')">
                 <div class="container">
                     <div class="row">
-                        <div class="col-7 text-left offset-4">
-                            <h2 class="title text-uppercase text-white text-right">
+                        <div class="col-md-7 offset-md-4 text-left">
+                            <h2 class="title text-uppercase text-white text-right d-none d-md-block">
                                 <small class="text-white">I am your developer <br /> to begin your next</small>
                                 <br />
                                 <div id="typed-strings">
-                                    <p>blog</p>
-                                    <p>photography</p>
-                                    <p>e-commerce</p>
-                                    <p>marketing</p>
-                                    <p>corporate</p>
-                                    <p>creative</p>
-                                    <p>personal</p>
-                                    <p>nonprofit</p>
+                                    <p class="sr-only">blog</p>
+                                    <p class="sr-only">photography</p>
+                                    <p class="sr-only">e-commerce</p>
+                                    <p class="sr-only">marketing</p>
+                                    <p class="sr-only">corporate</p>
+                                    <p class="sr-only">creative</p>
+                                    <p class="sr-only">personal</p>
+                                    <p class="sr-only">nonprofit</p>
+                                    <p class="sr-only">internal</p>
                                 </div>
-                                <span class="text-info" id="typed">hgfghf</span>
+                                <span class="text-info" id="typed">perfect</span>
                                 <br />
                                 <small class="text-white">website today.</small>
 
                             </h2>
+                            <h3 class="title text-uppercase text-white text-center d-block d-md-none">
+                                <small class="text-white">I am your developer <br /> to begin your next</small>
+                                <br />
+                                <div id="typed-strings">
+                                    <p class="sr-only">blog</p>
+                                    <p class="sr-only">photography</p>
+                                    <p class="sr-only">e-commerce</p>
+                                    <p class="sr-only">marketing</p>
+                                    <p class="sr-only">corporate</p>
+                                    <p class="sr-only">creative</p>
+                                    <p class="sr-only">personal</p>
+                                    <p class="sr-only">nonprofit</p>
+                                    <p class="sr-only">internal</p>
+                                </div>
+                                <span class="text-info" id="typed">perfect</span>
+                                <br />
+                                <small class="text-white">website today.</small>
 
+                            </h3>
+
+                        </div>
+                    </div>
+                    <div class="row d-block d-md-none">
+                        <div class="col-md-10 ml-auto mr-auto animated fadeInRightBig">
+                            <div class="card">
+                                <div class="card-header card-header-rose">
+                                    <h4>START YOUR FREE CONSULTATION NOW</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h5>Lets begin your free consultation today</h5>
+                                    {{ block "contact-form-mobile" . }}{{ partial "landing/contact-form" . }}{{end}}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <div class="col-4 bg-cta">
-                <div class="container">
-                    <!--<div class="row">-->
-                        <!--<div class="col-md-6 col-sm-8 offset-md-6 offset-sm-2">-->
-                            <!--<div class="card hero-cta animated fadeInRightBig">-->
-                                <!--<div class="card-header card-header-icon card-header-info">-->
-                                    <!--<h3 class="card-title text-uppercase">Get started now</h3>-->
-                                <!--</div>-->
-                                <!--<div class="card-body">-->
-                                    <!--<h6 class="card-title">start your <span class="text-rose">free</span> website consultation today</h6>-->
-                                    <!--{{ block "contact-form" . }}{{ partial "landing/contact-form" . }}{{end}}-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
+            <div class="page-header d-none col-lg-4 col-md-6 bg-cta d-md-block">
+                <div class="container cta-container">
+                    <div class="row">
+                        <div class="col-md-10 ml-auto mr-auto animated fadeInRightBig">
+                            <div class="card">
+                                <div class="card-header card-header-rose">
+                                    <h4>START YOUR FREE CONSULTATION NOW</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h5>Lets begin your free consultation today</h5>
+                                    {{ block "contact-form1" . }}{{ partial "landing/contact-form" . }}{{end}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
 
-    <div class="main main-raised">
+    <div class="main">
         <div id="about-me" class="section text-center">
             <div class="container">
                 <div class="row">
@@ -109,7 +142,7 @@
                         <h2 class="title animated zoomIn">About Me</h2>
                         <h5 class="description"> I am freelance web developer in Denver, Colorado. I create websites, and web applications big or small for individuals and companies.I have and have had clients in the Denver area. I am an expert Wordpress developer, php application specialist ,and a skilled database administrator.
                         </h5>
-                        <button class="btn btn-sm btn-rose">Start a Free Consultation</button>
+                        <button class="btn btn-sm btn-rose" data-toggle="modal" data-target="#contactModal">Start a Free Consultation</button>
 
                     </div>
                     <div class="col-md-6 text-left">
@@ -127,7 +160,7 @@
                                     <li><i class="fa-li fa fa-check icon icon-primary"></i>WordPress Development</li>
                                     <li><i class="fa-li fa fa-check icon icon-primary"></i>Server Administration</li>
                                 </ul>
-                                <button class="btn btn-sm btn-info">Get Started Now</button>
+                                <button class="btn btn-sm btn-info" data-toggle="modal" data-target="#contactModal">Get Started Now</button>
                             </div>
                         </div>
 
@@ -312,6 +345,7 @@
         </div>
 
     </div>
+    {{ block "contact-modal" . }}{{ partial "landing/contact-modal" . }}{{end}}
     {{ block "footer" . }}{{ partial "footer" . }}{{end}}
 </div>
 </body>
