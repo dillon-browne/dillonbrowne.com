@@ -16,8 +16,18 @@ var typed = new Typed("#typed", {
   stringsElement: "#typed-strings",
   typeSpeed: 75,
   shuffle: true,
-  backDelay: 600,
-  loop: true
+  backDelay: 700,
+  loop: true,
+  onComplete: function(self) { prettyLog("onCmplete " + self); },
+  preStringTyped: function(pos, self) { prettyLog("preStringTyped " + pos + " " + self); },
+  onStringTyped: function(pos, self) { prettyLog("onStringTyped " + pos + " " + self); },
+  onLastStringBackspaced: function(self) { prettyLog("onLastStringBackspaced " + self); },
+  onTypingPaused: function(pos, self) { prettyLog("onTypingPaused " + pos + " " + self); },
+  onTypingResumed: function(pos, self) { prettyLog("onTypingResumed " + pos + " " + self); },
+  onReset: function(self) { prettyLog("onReset " + self); },
+  onStop: function(pos, self) { prettyLog("onStop " + pos + " " + self); },
+  onStart: function(pos, self) { prettyLog("onStart " + pos + " " + self); },
+  onDestroy: function(self) { prettyLog("onDestroy " + self); }
 });
 
 console.log(typed);
