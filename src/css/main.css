@@ -12694,6 +12694,23 @@ footer {
     z-index: 2;
     position: relative; }
 
+.header-filter-cta {
+  position: relative; }
+  .header-filter-cta:before, .header-filter-cta:after {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: ""; }
+  .header-filter-cta::before {
+    background: rgba(0, 0, 0, 0.5); }
+  .header-filter-cta .container {
+    z-index: 2;
+    position: relative; }
+
 .hero-cta {
   background: rgba(234, 234, 234, 0.9); }
 
