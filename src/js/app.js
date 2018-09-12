@@ -12,7 +12,13 @@ import Typed from "typed.js";
 // Say hello
 console.log("🦊 Hello!");
 
-var typed = new Typed("#typed", {
+var typed = new Typed("#typed-mobile", {
+  stringsElement: "#typed-strings",
+  typeSpeed: 75,
+  backDelay: 850,
+  loop: true
+});
+var typedDesktop = new Typed("#typed-desktop", {
   stringsElement: "#typed-strings",
   typeSpeed: 75,
   backDelay: 850,
@@ -20,6 +26,7 @@ var typed = new Typed("#typed", {
 });
 
 console.log(typed);
+console.log(typedDesktop);
 $("#EmailMe").submit(function(e) {
   e.preventDefault();
   var $form = $(this);
