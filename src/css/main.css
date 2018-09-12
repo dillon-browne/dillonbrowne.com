@@ -12718,8 +12718,8 @@ footer {
   border-radius: 15px; }
 
 .bg-cta {
-  background: #2dfda0;
-  background: radial-gradient(circle, rgba(45, 253, 160, 0.5) 20%, #0baba7 46%, #1eb9cf 75%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2dfda0",endColorstr="#1eb9cf",GradientType=1); }
+  background: #156a68;
+  background: linear-gradient(125deg, #156a68 0%, #1eb9cf 50%, #88f0f7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#156a68",endColorstr="#88f0f7",GradientType=1); }
 
 /*# sourceMappingURL=main.css.map */
