@@ -12722,4 +12722,7 @@ footer {
   background: linear-gradient(125deg, #156a68 0%, #1eb9cf 50%, #88f0f7 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#156a68",endColorstr="#88f0f7",GradientType=1); }
 
+.cta-container {
+  margin-top: 30%; }
+
 /*# sourceMappingURL=main.css.map */

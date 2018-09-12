@@ -12,13 +12,13 @@ import Typed from "typed.js";
 // Say hello
 console.log("🦊 Hello!");
 
-var typed = new Typed("#typed-mobile", {
+var typed = new Typed("#typedMobile", {
   stringsElement: "#typed-strings",
   typeSpeed: 75,
   backDelay: 850,
   loop: true
 });
-var typedDesktop = new Typed("#typed-desktop", {
+var typedDesktop = new Typed("#typedDesktop", {
   stringsElement: "#typed-strings",
   typeSpeed: 75,
   backDelay: 850,
