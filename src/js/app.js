@@ -14,9 +14,9 @@ console.log("🦊 Hello!");
 
 var typed = new Typed("#typed", {
   stringsElement: "#typed-strings",
-  typeSpeed: 800,
+  typeSpeed: 200,
   shuffle: true,
-  backDelay: 1200
+  backDelay: 800
 });
 
 console.log(typed);
