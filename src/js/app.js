@@ -8,9 +8,15 @@ import "smoothscroll";
 import "@fortawesome/fontawesome-free/js/all";
 import "material-design-icons";
 import "bootstrap-notify";
+import Typed from "typed.js";
 // Say hello
 console.log("🦊 Hello!");
 
+var typed = new Typed("#typed", {
+  stringsElement: "#typed-strings"
+});
+
+console.log(typed);
 $("#EmailMe").submit(function(e) {
   e.preventDefault();
   var $form = $(this);
