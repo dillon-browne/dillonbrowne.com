@@ -82,9 +82,9 @@
 }
 
 .bg-cta{
-  background: rgb(45,253,160);
-  background: -moz-radial-gradient(circle, rgba(45,253,160,0.5) 20%, rgba(11,171,167,1) 46%, rgba(30,185,207,1) 75%);
-  background: -webkit-radial-gradient(circle, rgba(45,253,160,0.5) 20%, rgba(11,171,167,1) 46%, rgba(30,185,207,1) 75%);
-  background: radial-gradient(circle, rgba(45,253,160,0.5) 20%, rgba(11,171,167,1) 46%, rgba(30,185,207,1) 75%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2dfda0",endColorstr="#1eb9cf",GradientType=1);
+  background: rgb(21,106,104);
+  background: -moz-linear-gradient(125deg, rgba(21,106,104,1) 0%, rgba(30,185,207,1) 50%, rgba(136,240,247,1) 100%);
+  background: -webkit-linear-gradient(125deg, rgba(21,106,104,1) 0%, rgba(30,185,207,1) 50%, rgba(136,240,247,1) 100%);
+  background: linear-gradient(125deg, rgba(21,106,104,1) 0%, rgba(30,185,207,1) 50%, rgba(136,240,247,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#156a68",endColorstr="#88f0f7",GradientType=1);
 }

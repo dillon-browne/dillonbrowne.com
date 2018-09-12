@@ -12717,4 +12717,9 @@ footer {
 .border-round {
   border-radius: 15px; }
 
+.bg-cta {
+  background: #2dfda0;
+  background: radial-gradient(circle, rgba(45, 253, 160, 0.5) 20%, #0baba7 46%, #1eb9cf 75%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2dfda0",endColorstr="#1eb9cf",GradientType=1); }
+
 /*# sourceMappingURL=main.css.map */
