@@ -13,7 +13,10 @@ import Typed from "typed.js";
 console.log("🦊 Hello!");
 
 var typed = new Typed("#typed", {
-  stringsElement: "#typed-strings"
+  stringsElement: "#typed-strings",
+  typeSpeed: 800,
+  shuffle: true,
+  backDelay: 1200
 });
 
 console.log(typed);
