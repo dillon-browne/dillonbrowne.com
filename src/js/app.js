@@ -58,12 +58,12 @@ $("#TextMe").submit(function(e) {
     $("#TextMe").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
   });
 });
-$("#consultation").submit(function(e) {
+$(".consultation").submit(function(e) {
   e.preventDefault();
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
     msgSent();
-    $("#consultation").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
+    $(".consultation").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
   });
 });
 
