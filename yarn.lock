@@ -3479,6 +3479,10 @@ graceful-fs@~1.2.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
+granim@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/granim/-/granim-1.1.1.tgz#eb34f896be78a5c3f2f9fe1068d5d1bb2ffd0c30"
+
 gulp-autoprefixer@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/gulp-autoprefixer/-/gulp-autoprefixer-5.0.0.tgz#8237c278a69775270a1cafe7d6f101cfcd585544"
@@ -3816,9 +3820,9 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
-hugo-bin@^0.23.0:
-  version "0.23.0"
-  resolved "https://registry.yarnpkg.com/hugo-bin/-/hugo-bin-0.23.0.tgz#d93101aff9809caecbb25271c7eef8c4442dfc61"
+hugo-bin@^0.30.0:
+  version "0.30.0"
+  resolved "https://registry.yarnpkg.com/hugo-bin/-/hugo-bin-0.30.0.tgz#765f3b58c51994f5967225dfcc008cf9171e18ac"
   dependencies:
     bin-wrapper "3.0.2"
     del-cli "1.1.0"

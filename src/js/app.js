@@ -9,6 +9,7 @@ import "@fortawesome/fontawesome-free/js/all";
 import "material-design-icons";
 import "bootstrap-notify";
 import Typed from "typed.js";
+import Granim from "granim";
 // Say hello
 console.log("🦊 Hello!");
 
@@ -25,6 +26,20 @@ var typedDesktop = new Typed("#typedDesktop", {
   loop: true
 });
 
+var granimInstance = new Granim({
+  element: "#granim-canvas",
+  name: "granim",
+  opacity: [1, 1],
+  states : {
+    "default-state": {
+      gradients: [
+        ["#834D9B", "#D04ED6"],
+        ["#1CD8D2", "#93EDC7"]
+      ]
+    }
+  }
+});
+console.log(granimInstance);
 console.log(typed);
 console.log(typedDesktop);
 $("#EmailMe").submit(function(e) {
@@ -43,6 +58,15 @@ $("#TextMe").submit(function(e) {
     $("#TextMe").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
   });
 });
+$("#consultation").submit(function(e) {
+  e.preventDefault();
+  var $form = $(this);
+  $.post($form.attr("action"), $form.serialize()).then(function() {
+    msgSent();
+    $("#consultation").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
+  });
+});
+
 
 function msgSent() {
   $.notify({
