@@ -26,19 +26,28 @@ var typedDesktop = new Typed("#typedDesktop", {
   loop: true
 });
 
-// var granimInstance = new Granim({
-//   element: "#granim-canvas",
-//   name: "granim",
-//   opacity: [1, 1],
-//   states : {
-//     "default-state": {
-//       gradients: [
-//         ["#834D9B", "#D04ED6"],
-//         ["#1CD8D2", "#93EDC7"]
-//       ]
-//     }
-//   }
-// });
+var granimInstance = new Granim({
+  element: "#granim-canvas",
+  direction: "top-bottom",
+  opacity: [1, 1],
+  isPausedWhenNotInView: true,
+  image : {
+    source: "img/denver.jpg",
+    blendingMode: "multiply",
+    stretchMode: ["stretch", "stretch"]
+  },
+  states : {
+    "default-state": {
+      gradients: [
+        ["#29323c", "#485563"],
+        ["#FF6B6B", "#556270"],
+        ["#80d3fe", "#7ea0c4"],
+        ["#f0ab51", "#eceba3"]
+      ],
+      transitionSpeed: 7000
+    }
+  }
+});
 console.log(granimInstance);
 console.log(typed);
 console.log(typedDesktop);
