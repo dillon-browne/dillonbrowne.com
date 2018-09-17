@@ -36,7 +36,7 @@ new Granim({
   opacity: [1, 1],
   isPausedWhenNotInView: true,
   image : {
-    source: "img/denver.jpg",
+    source: "img/denver-low.jpg",
     blendingMode: "multiply",
     stretchMode: ["stretch", "stretch"]
   },
