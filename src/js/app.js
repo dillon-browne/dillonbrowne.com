@@ -13,24 +13,24 @@ import Granim from "granim";
 import AOS from "aos";
 
 // Say hello
-console.log("🦊 Hello!");
+console.log("🦊 Checkout my source code on github - Dillon!");
 AOS.init({
   duration: 1000,
 });
-var typed = new Typed("#typedMobile", {
+new Typed("#typedMobile", {
   stringsElement: "#typed-strings",
   typeSpeed: 75,
   backDelay: 850,
   loop: true
 });
-var typedDesktop = new Typed("#typedDesktop", {
+new Typed("#typedDesktop", {
   stringsElement: "#typed-strings",
   typeSpeed: 75,
   backDelay: 850,
   loop: true
 });
 
-var granimInstance = new Granim({
+new Granim({
   element: "#granim-canvas",
   direction: "top-bottom",
   opacity: [1, 1],
@@ -52,9 +52,7 @@ var granimInstance = new Granim({
     }
   }
 });
-console.log(granimInstance);
-console.log(typed);
-console.log(typedDesktop);
+
 $("#EmailMe").submit(function(e) {
   e.preventDefault();
   var $form = $(this);
