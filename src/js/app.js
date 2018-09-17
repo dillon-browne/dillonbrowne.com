@@ -10,9 +10,13 @@ import "material-design-icons";
 import "bootstrap-notify";
 import Typed from "typed.js";
 import Granim from "granim";
+import AOS from "aos";
+
 // Say hello
 console.log("🦊 Hello!");
-
+AOS.init({
+  duration: 1000,
+});
 var typed = new Typed("#typedMobile", {
   stringsElement: "#typed-strings",
   typeSpeed: 75,

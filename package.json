@@ -17,6 +17,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.2.0",
     "animate.css": "^3.6.1",
+    "aos": "^2.3.3",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
