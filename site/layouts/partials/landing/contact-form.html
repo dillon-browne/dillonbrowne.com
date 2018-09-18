@@ -1,7 +1,10 @@
 <div class="row">
     <div class="col-12">
         <div class="contact-form-container text-center">
-            <form id="consultation" name="consultation" class="consultation" data-netlify="true">
+            <form id="consultation" name="consultation" netlify-honeypot="con-bot-field" class="consultation" data-netlify="true">
+                <p class="d-none">
+                    <label>Don’t fill this out if you're human: <input name="con-bot-field" /></label>
+                </p>
                 <div class="form-row">
                     <div class="form-group col-12">
                         <div class="input-group">
@@ -10,7 +13,7 @@
                                                   <i class="material-icons">email</i>
                                               </span>
                             </div>
-                            <input type="email" class="form-control" placeholder="Email" name="email">
+                            <input type="email" class="form-control" placeholder="Email" name="email" required>
 
                         </div>
                         <small id="emailHelp" class="form-text text-muted">I will never share your email with anyone else.</small>
