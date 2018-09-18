@@ -53,19 +53,6 @@ new Granim({
   }
 });
 
-function sendToGA() {
-  ga("send", {
-    hitType: "event",
-    eventCategory: "Form",
-    eventAction: "submit",
-    eventLabel: "Contact Form"
-  });
-  gtag("event", "conversion", {
-    "send_to": "AW-1046000467/nd2YCImyv4kBENPm4vID"
-  });
-  return true;
-}
-
 $("#EmailMe").submit(function(e) {
   e.preventDefault();
   var $form = $(this);
@@ -87,7 +74,6 @@ $(".consultation").submit(function(e) {
   e.preventDefault();
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
-    sendToGA();
     msgSent();
     $(".consultation").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
   });
