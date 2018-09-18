@@ -57,6 +57,7 @@ $("#EmailMe").submit(function(e) {
   e.preventDefault();
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
+    gtag_report_conversion();
     msgSent();
     $("#EmailMe").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
   });
@@ -65,6 +66,7 @@ $("#TextMe").submit(function(e) {
   e.preventDefault();
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
+    gtag_report_conversion();
     msgSent();
     $("#TextMe").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
   });
@@ -73,6 +75,7 @@ $(".consultation").submit(function(e) {
   e.preventDefault();
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
+    gtag_report_conversion();
     msgSent();
     $(".consultation").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
   });
