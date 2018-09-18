@@ -57,7 +57,8 @@ $("#EmailMe").submit(function(e) {
   e.preventDefault();
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
-    gtag_report_conversion();
+    var reported = gtag_report_conversion();
+    console.log("Reported: ", reported);
     msgSent();
     $("#EmailMe").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
   });
@@ -66,7 +67,8 @@ $("#TextMe").submit(function(e) {
   e.preventDefault();
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
-    gtag_report_conversion();
+    var reported = gtag_report_conversion();
+    console.log("Reported: ", reported);
     msgSent();
     $("#TextMe").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
   });
@@ -75,7 +77,8 @@ $(".consultation").submit(function(e) {
   e.preventDefault();
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
-    gtag_report_conversion();
+    var reported = gtag_report_conversion();
+    console.log("Reported: ", reported);
     msgSent();
     $(".consultation").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
   });
