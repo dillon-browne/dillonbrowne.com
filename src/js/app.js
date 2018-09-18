@@ -14,16 +14,23 @@ import AOS from "aos";
 
 // Say hello
 console.log("🦊 Checkout my source code on github - Dillon!");
-
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  "event": "registrationComplete"
+});
 $(document).ready(function() {
-  $(document).trigger("TriggerGoogleTag");
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    "event": "registrationComplete"
+  });
+  $("body").trigger("TriggerGoogleTag");
   dataLayer.push({
     "event": "registrationComplete"
   });
   $(document).on("registrationComplete", function() {
     console.log("Triggered Eevnt reg");
   });
-  $(document).on("TriggerGoogleTag", function() {
+  $("body").on("TriggerGoogleTag", function() {
     console.log("Triggered GA");
   });
 });
