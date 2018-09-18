@@ -57,8 +57,9 @@ $("#EmailMe").submit(function(e) {
   e.preventDefault();
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
-    var reported = gtag_report_conversion();
-    console.log("Reported: ", reported);
+    gtag("event", "conversion", {
+      "send_to": "AW-1046000467/nd2YCImyv4kBENPm4vID"
+    });
     msgSent();
     $("#EmailMe").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
   });
@@ -67,18 +68,21 @@ $("#TextMe").submit(function(e) {
   e.preventDefault();
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
-    var reported = gtag_report_conversion();
-    console.log("Reported: ", reported);
+    gtag("event", "conversion", {
+      "send_to": "AW-1046000467/nd2YCImyv4kBENPm4vID"
+    });
     msgSent();
     $("#TextMe").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
   });
 });
+
 $(".consultation").submit(function(e) {
   e.preventDefault();
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
-    var reported = gtag_report_conversion();
-    console.log("Reported: ", reported);
+    gtag("event", "conversion", {
+      "send_to": "AW-1046000467/nd2YCImyv4kBENPm4vID"
+    });
     msgSent();
     $(".consultation").html("<i class='icon icon-success fa fa-check-circle fa-5x animated zoomIn'></i>");
   });
