@@ -16,23 +16,7 @@ import AOS from "aos";
 console.log("🦊 Checkout my source code on github - Dillon!");
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
-  "event": "registrationComplete"
-});
-$(document).ready(function() {
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    "event": "registrationComplete"
-  });
-  $("body").trigger("TriggerGoogleTag");
-  dataLayer.push({
-    "event": "registrationComplete"
-  });
-  $(document).on("registrationComplete", function() {
-    console.log("Triggered Eevnt reg");
-  });
-  $("body").on("TriggerGoogleTag", function() {
-    console.log("Triggered GA");
-  });
+  "event": "TriggerGoogleTag"
 });
 
 
