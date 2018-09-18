@@ -4,3 +4,9 @@
 
 [context.deploy-preview]
   command = "npm run build-preview"
+
+# A basic redirects rule
+[[redirects]]
+  from = "/denver"
+  to = "/denver-web-developer"
+
