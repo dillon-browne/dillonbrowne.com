@@ -57,10 +57,6 @@ new Granim({
 
 $("#EmailMe").submit(function(e) {
   e.preventDefault();
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    "event": "TriggerGoogleTag"
-  });
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
     msgSent();
@@ -69,10 +65,6 @@ $("#EmailMe").submit(function(e) {
 });
 $("#TextMe").submit(function(e) {
   e.preventDefault();
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    "event": "TriggerGoogleTag"
-  });
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
     msgSent();
@@ -82,10 +74,6 @@ $("#TextMe").submit(function(e) {
 
 $(".consultation").submit(function(e) {
   e.preventDefault();
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    "event": "TriggerGoogleTag"
-  });
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
     msgSent();
@@ -95,6 +83,10 @@ $(".consultation").submit(function(e) {
 
 
 function msgSent() {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    "event": "TriggerGoogleTag"
+  });
   $.notify({
     // options
     message: "Thanks for reaching out to me! I will contact you within the next day.",
