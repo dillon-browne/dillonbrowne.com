@@ -14,10 +14,6 @@ import AOS from "aos";
 
 // Say hello
 console.log("🦊 Checkout my source code on github - Dillon!");
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  "event": "TriggerGoogleTag"
-});
 
 
 AOS.init({
@@ -61,6 +57,10 @@ new Granim({
 
 $("#EmailMe").submit(function(e) {
   e.preventDefault();
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    "event": "TriggerGoogleTag"
+  });
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
     msgSent();
@@ -69,6 +69,10 @@ $("#EmailMe").submit(function(e) {
 });
 $("#TextMe").submit(function(e) {
   e.preventDefault();
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    "event": "TriggerGoogleTag"
+  });
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
     msgSent();
@@ -78,6 +82,10 @@ $("#TextMe").submit(function(e) {
 
 $(".consultation").submit(function(e) {
   e.preventDefault();
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    "event": "TriggerGoogleTag"
+  });
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
     msgSent();
