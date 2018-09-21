@@ -23,26 +23,6 @@
   <link rel="stylesheet" href="css/main.css"/>
 
 
-
-
-  <!-- Event snippet for Lead from Forms conversion page
-  In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-  <script>
-      function gtag_report_conversion(url) {
-          var callback = function () {
-              if (typeof(url) != 'undefined') {
-                  window.location = url;
-              }
-          };
-          gtag('event', 'conversion', {
-              'send_to': 'AW-1046000467/nd2YCImyv4kBENPm4vID',
-              'event_callback': callback
-          });
-          return false;
-      }
-  </script>
-
-
 </head>
 
   <body class="home blog index-page sidebar-collapse app-data index-data home-data front-page-data">
